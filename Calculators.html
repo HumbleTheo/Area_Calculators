@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<script src="./formula.js" async></script>
+		<link rel="stylesheet" href="./Pretty.css" />
+
+		<title>Calculator</title>
+	</head>
+	<body>
+		<select onchange="activate(this.value)">
+			<option value="SMC">Simple Math Calculator</option>
+			<option value="ACC">Area of Circle with Circumference</option>
+			<option value="ACR">Area of Circle with Radius</option>
+			<option value="ACD">Area of Circle with Diameter</option>
+			<option value="AR">Area of Rectangle</option></select
+		><br /><br /><br />
+
+		<div id="SMC">
+			<div class="content">
+				<div id="display"></div>
+				<div class="all_buttons">
+					<div class="button">C</div>
+					<div class="button">/</div>
+					<div class="button">*</div>
+					<div class="button">&larr;</div>
+					<div class="button">7</div>
+					<div class="button">8</div>
+					<div class="button">9</div>
+					<div class="button">-</div>
+					<div class="button">4</div>
+					<div class="button">5</div>
+					<div class="button">6</div>
+					<div class="button">+</div>
+					<div class="button">1</div>
+					<div class="button">2</div>
+					<div class="button">3</div>
+					<div class="button">.</div>
+					<div class="button">(</div>
+					<div class="button">0</div>
+					<div class="button">)</div>
+					<div class="button" id="equal">Calculate</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="ACC" class="hidden">
+			<input id="result2" type="text" />
+			<input type="button" value="Calculate" onclick="calculate()" />
+		</div>
+
+		<div id="ACR" class="hidden">
+			<input id="result3" type="text" />
+			<input type="button" value="Calculate" onclick="calculate()" />
+		</div>
+
+		<div id="ACD" class="hidden">
+			<input id="result4" type="text" />
+			<input type="button" value="Calculate" onclick="calculate()" />
+		</div>
+
+		<div id="AR" class="hidden">
+			<input id="lth" type="text" placeholder="enter length here" />
+			<input type="text" id="wth" placeholder="enter width here" />
+			<input type="text" id="result5" />
+			<input type="button" value="Calculate" onclick="calculate()" />
+		</div>
+	</body>
+</html>
